@@ -1,0 +1,23 @@
+#include "sculptor.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    Sculptor projeto(100,100,100);
+    projeto.setColor(0.5,0.5,0.5,1);
+    projeto.putBox(6,12,6,12,6,12);
+    projeto.cutBox(10,12,10,12,10,12);
+    projeto.setColor(0.6,0.3,0.8,0.9);
+    projeto.putSphere(30,30,30,21);
+    projeto.cutSphere(40,40,40,7);
+    projeto.setColor(0.2,0.8,0.5,0.1);
+    projeto.putEllipsoid(60,70,60,6,15,18);
+    projeto.cutEllipsoid(70,75,70,10,23,30);
+    projeto.writeOFF("C:/Users/G/Desktop/p.off");
+
+}
